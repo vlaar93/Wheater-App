@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, Alert } from 'react-native';
 
+
 export default function WeatherScreen() {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState([]);
@@ -102,12 +103,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   buttonContainer: {
-    flexDirection: 'row', 
+    flexDirection: 'row',
     alignItems: 'center',
-    margin: 25, 
+    margin: 25,
   },
   button: {
-    flex: 1, 
+    flex: 1,
     backgroundColor: '#17bce6',
     padding: 10,
     borderRadius: 10,
@@ -138,11 +139,12 @@ const styles = StyleSheet.create({
   ville: {
     color: '#fff',
     marginBottom: 25,
-    fontWeight:"bold",
+    fontWeight: "bold",
     fontSize: 20,
   },
   infoContainer: {
     marginTop: 20,
+    paddingVertical: 15,
     backgroundColor: '#17bce6',
     paddingHorizontal: 15,
     borderRadius: 10,
@@ -155,7 +157,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   weatherIcon: {
-    width: 75,
-    height: 75,
+    width: 50,
+    height: 50,
   },
 });

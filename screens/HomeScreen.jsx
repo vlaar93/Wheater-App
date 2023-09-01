@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'react-native';
+
 
 export default function HomeScreen() {
   const navigation = useNavigation();
+
+  useEffect(() => {
+    StatusBar.setBarStyle('dark-content');
+
+    return () => {
+      StatusBar.setBarStyle('light-content'); // Rétablir la couleur de la barre de statut d'origine
+    };
+  }, []);
 
   return (
     <ImageBackground
@@ -46,7 +56,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     width: 150,
-    alignItems: 'center', 
+    alignItems: 'center',
   },
   buttonText: {
     color: 'white',
